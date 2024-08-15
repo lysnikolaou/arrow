@@ -41,6 +41,7 @@ jobs:
       {% else %}
       PYTHON_IMAGE_TAG: "{{ python_version }}"
       {% endif %}
+      PYTHON_ABI_TAG: "{{ python_abi_tag }}"
 
     steps:
       {{ macros.github_checkout_arrow()|indent }}
